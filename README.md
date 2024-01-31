@@ -4,7 +4,7 @@ make the correct calculations. At the bottom of the page I added the time that I
 because the time varies if the door that is beside the stove is open.
 
 
-The music folder contains a personal database which contains the music that I know (Not absolutely everything but I continuously update it). It is built with JQuery.
+The music folder contains a personal database which contains the music that I know organized by artist and then by album (Not absolutely everything but I continuously update it). The albums that I know completely are marked with green. It has been built with JQuery.
 
 
 Both projects have responsive design for the case of cellphones.
