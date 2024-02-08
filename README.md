@@ -18,6 +18,18 @@ This project includes responsive design for the case of cellphones.
 
 You can experience the web page at https://www.hittite-imhotep.xyz/musica
 
+# Data
+
+The Data folder contains a tree shaped notes that I've made in the topic of data science. I found it useful to make notes in this shape in some knowledge areas. Not all knowledge is linear and therefore not all knowledge can be optimally structured in this way. In this notes you can press whatever title or paragraph that changes color when you hover it. When you do that, it carries you to a more extended explanation of the thing, this is where the tree shape comes in. I use a yellow like color to mark questions or topics I haven't researched. I like to add these things to remember that things exist and learn about them later.
+
+You can experience the web page at https://www.hittite-imhotep.xyz/Data
+
+# Complex
+
+
+
+
+
 
 
 
