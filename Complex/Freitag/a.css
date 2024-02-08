@@ -1,0 +1,21 @@
+p{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+h2{
+    align-self: center;
+    margin-bottom: 50px;
+    padding-left: 40%;
+}
+
+body{
+    padding: 20%;
+    padding-top: 5%;
+    padding-bottom: 0;
+}
+
+.enunciado{
+    margin-bottom: 50px;
+}
+

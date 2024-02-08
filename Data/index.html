@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+
+    <div class="titulo"><p>Ciencias de datos</p></div>
+    
+    <div class="grid">
+    
+        <div class="box">
+            <div class="titleBox">Ideas generales</div>
+            <div class="content">
+                <p>Las funciones que hacen cosas locas de Scikit learn luego quitan los índices y hay que regresarlos</p>
+                <p>Hacer esa cosa de dtype == "object" es útil mucho</p>
+                <p>Recordar DataFrame.to_csv()</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Python generalities</div>
+            <div class="content">
+                <p>serie.unique() te da una lista de los valores posibles de la serie </p>
+                <p>Recordar el parámetro axis en cosas de DataFrames</p>
+                <p>Parece que luego hay que asegurarse que los nombres de las columnas de un Dataframe sean de tipo str, esto con astype(str)</p>
+            </div>
+            <div class="question">¿Qué hace el signo de % antes de una línea?</div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Gestionando variables categóricas</div>
+            <div class="content">
+                <p>Drop columns with categorical variables</p>
+                <div id="grid32">
+                    <div>Ordinal Encoding</div>
+                    <div>Sklearn: OrdinalEncoder</div>
+                    <div>One Hot Encoding</div>
+                    <div>Sklearn: OneHotEncoder</div>
+                    <div></div>
+                    <div>Estas cosas usan lo de fit_transform y transform</div>
+                </div>
+                <p>Cardinalidad de una variable categórica</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Sparse matrix</div>
+            <div class="content">
+                <p><b>Definición</b></p>
+                <p>Tiene pocos elementos no nulos</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="titleBox">Validación cruzada</div>
+            <div class="content">
+                <p>Cambiar el conjunto de validación varias veces</p>
+            </div>
+        </div>
+        <div class="box">
+            <a href="DecisionTrees/index.html"><div class="titleBox clickable" id="DecisionTrees">Decision trees</div></a>
+            <div class="content">
+                <p>Random forest: Simplemente se crean muchos árboles de decisión, se corren todos y luego se vota</p>
+            </div>
+        </div>
+        <div class="box">
+            <a href="Visualizacion/index.html"><div class="titleBox clickable alone" id="Visualizacion">Visualización</div></a>
+        </div>
+        <div class="box">
+            <a href="Clasificacion/index.html"><div class="titleBox clickable alone" id="Clasificacion">Clasificación</div></a>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <p>Sklearn tiene la convención de que los números grandes son mejores</p>
+            </div>
+            <a href="Modulossklearn/index.html"><div class="titleBox clickable bottomTitle">Módulos interesantes de sklearn</div></a>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Feature Engeneering</div>
+
+            <div class="content">
+            <div class="grid12">
+                <div><p>Tomar razones entre los otros datos</p></div>
+                <div><p>A la mayoría de modelos les cuesta aprender estos patrones</p></div>
+            </div>
+
+            <a href="FeatureUtility/index.html"><div class="clickable">Feature utility metrics</div></a>
+            
+                <p>Los lineales aprenden más fácil sumas y restas</p>
+                <p>A las redes neuronales les sirve normalizar</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Pipelines</div>
+            <div class="content">
+                <p>Se hace fit y predict igual que con model</p>
+                <p>Se anidan los pipelines</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">XGBoost</div>
+            <div class="content">
+                <a href="xgboost/index.html"><div class="clickable"><p>xgboost</p></div></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="titleBox">Ensemble Method</div>
+            <div class="content">
+                <p>Combina métodos</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Reducción de dimensionalidad</div>
+            <div class="content">
+                <p>Principal Component Analysis (PCA)</p>
+                <p>Independent Component Analysis (ICA) </p>
+                <p>Extended Sammon Projection (ESP)</p>
+                <p>Feature selectors</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="question alone">Manifold learning</div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Data Leakage</div>
+            <div class="content">
+                <p>Los datos tienen información del target</p>
+                <p>Hay dos tipos: target leakage y train-test contamination</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="titleBox">Librerías de Python</div>
+            <div class="content">
+                <p>pathlib</p>
+                <p>warnings</p>
+                <a href="statsmodels/index.html" ><p class="clickable">statsmodels</p></a>
+                <a href="tensorflow/index.html"><p class="clickable">tensorflow</p></a>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</body>
+</html>

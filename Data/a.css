@@ -1,0 +1,132 @@
+html{
+    background-color: #9de19a;
+    caret-color: transparent;
+}
+
+p{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+.titulo{
+    font-size: 2em;
+    padding-left:42%;
+    width: 100%;
+}
+
+a, a:visited, a:hover, a:active {
+    color: black;
+    text-decoration: none;
+    height: inherit;
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px;
+}
+
+.box{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #a4c5ea;
+}
+
+.titleBox{
+    background-color: #bca9e1;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 10px;
+}
+
+.subtitle{
+    background-color: #d8a9e1;
+}
+
+.bottomTitle{
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: none;
+    border-top: 1px solid black;
+}
+
+.alone{
+    border-bottom: none;
+    border-radius: 5px;
+    height: 100%;
+    padding:0;
+    padding-left: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.question.alone{
+    border-bottom: none;
+    border-radius: 5px;
+    height: 100%;
+    padding:0;
+    padding-left: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    padding: 10px;
+    padding-top: 0px;
+    padding-top: 0px;
+}
+
+.question{
+    background-color: #e7eca3;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#grid32{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+}
+
+.grid12{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+}
+
+.grid4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:5px;
+}
+
+.clickable:hover{
+    background-color: white;
+    cursor: default;
+    caret-color: transparent;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    
+    .alone{
+        min-height: 40px;
+    }
+    
+}

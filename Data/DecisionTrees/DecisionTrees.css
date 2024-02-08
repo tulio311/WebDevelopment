@@ -1,0 +1,11 @@
+.only{
+    width:60%;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+
+#DecisionTitle{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-right: 1px solid black;
+}
