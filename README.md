@@ -26,6 +26,17 @@ You can experience the web page at https://www.hittite-imhotep.xyz/Data
 
 # Complex
 
+In this project I will be writing the principal results and definitions of 2 Complex Variable books, the Marsden's and Freitag's ones, as I continue to study those.
+
+You can view my advance in the first chapters at the links:
+
+https://www.hittite-imhotep.xyz/Complex/Marsden
+
+https://www.hittite-imhotep.xyz/Complex/Freitag
+
+
+
+
 
 
 
