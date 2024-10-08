@@ -1,3 +1,72 @@
+let rolas = {};
+
+// This function makes the fetch request and returns the response data
+async function getData() {
+
+    try {
+        const response = await fetch('http://localhost:8000/rolas.php', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        const responseData = await response.json();  // Parse the JSON response
+        return responseData;  // Return the response data
+    } catch (error) {
+        console.error('Error:', error);
+        return null;  // Return null on error
+    }
+}
+
+// Example of calling the getData() function and then accessing the responseData
+async function main() {
+    rolas = await getData();
+    //rolas = responseData;  // Wait for the fetch to complete
+    //console.log('Response Data:', responseData);  // Always log the most recent responseData
+}
+
+main();  // Call the function
+
+/*
+function callback(data){
+    rolas = data;
+}
+
+fetch('http://localhost:8000/rolas.php', {
+    method: 'GET', // or 'PUT', 'PATCH', etc.
+    headers: {
+        'Content-Type': 'application/json', // Specify the content type as JSON
+    }
+})
+.then(response => response.json())  // Parse the response as JSON
+.then(responseData => {
+    callback(responseData);
+    //console.log('Response:', responseData);  // Handle the JSON response
+})
+.catch(error => {
+    console.error('Error:', error);  // Handle errors
+});
+*/
+
+setTimeout(() => {
+    console.log(rolas);  // Will show the most updated data
+}, 2000); 
+
+
+const nArtistas = document.getElementsByClassName('table-row').length;
+
+console.log(nArtistas);
+
+function createArray(n) {
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+
 var aparecidos = 0;
 function aparecerDiscos(){
     var value = getComputedStyle(document.body).getPropertyValue('--resp');
@@ -32,6 +101,21 @@ function aparecerDiscos(){
 
 }
 
+
+function searchDiscos(id){
+
+    let arr = [];
+
+    for(row in rolas){
+        //console.log(row);
+        if (rolas[row]['artistID'] == id){
+            arr.push([row,rolas[row]['name'],rolas[row]['finished'],rolas[row]['songs']]);
+        }
+    }
+    return arr;
+}
+
+
 /*
 
 $(".disc").click(function (){
@@ -53,20 +137,33 @@ $(".disc").click(function (){
     $("#d2").html("Stories");
     $("#d3").html("Tim");
 
-
-
-
-
-
-
-
-
 });
 */
-for(let num=0;num<3;num++){
+
+
+function isAloneSong(i){
+
+    let fin = rolas[i]['finished'];
+    let songs = JSON.parse(rolas[i]['songs']);
+    let name = rolas[i]['name'];
+
+    if(songs.length == 1 && fin == 1 && songs[0] == name){
+        return 1;
+    }else{
+        return 0;
+    }
+
+}
+
+
+for(let num=0;num<8;num++){
     $("#d"+num).click(function (){
 
-        if(window[artistaGlobal + num]=== undefined){
+        let discos = searchDiscos(artistaGlobal);
+
+        console.log(artistas);
+
+        if(isAloneSong(discos[num][0])){
             
         }else{
             var value = getComputedStyle(document.body).getPropertyValue('--resp');
@@ -98,37 +195,42 @@ $("#overlay").click(function(){
 
 var artistaGlobal;
 
+var artistas = createArray(nArtistas);
 
 
 $(artistas).each( function( i, artist ) {
 
-	$("#" + artist).click(function(){
+    
+
+	$("#_" + artist).click(function(){
         artistaGlobal = artist;
         console.log(artist);
         if(aparecidos == 0){
             aparecerDiscos();
         }
 		$(".d").html("");
-        
-        $(window["d" + artist]).each(function (i,disco){
 
-            if(window["f"+artist][i] == 1){
+        let discos = searchDiscos(artist);
+
+        $(discos).each(function (i,disco){
+
+            if(disco[2] == 1){
                 $("#d"+i).css("background-color","#AFE1AF");
             }else{
                 $("#d"+i).css("background-color","lightgray");
             }
 
-            console.log("#d" + i);
+            //console.log("#d" + i);
 
-            console.log(window[artist + i]=== undefined);
+            //console.log(window[artist + i]=== undefined);
             
-            if(window[artist + i]=== undefined){/*
+            if(isAloneSong(disco[0])){/*
                 //$("#d" + i).attr("class","d");
                 $("#d"+i).hover(function() {
                     $(this).css("background-color","lightgray");
                 });*/
                 var color="lightgray";
-                if(window["f"+artist][i] == 1){
+                if(disco[2] == 1){
                     color = "#AFE1AF";
                 } 
 
@@ -140,7 +242,7 @@ $(artistas).each( function( i, artist ) {
             }else{
 
                 var color="lightgray";
-                if(window["f"+artist][i] == 1){
+                if(disco[2] == 1){
                     color = "#AFE1AF";
                 } 
 
@@ -152,7 +254,7 @@ $(artistas).each( function( i, artist ) {
                 });              //$("#d" + i).attr("class","d dc");*/
             }
             
-            $("#d" + i).html(disco);
+            $("#d" + i).html(disco[1]);
             //$("#d" + (i+1)).attr("id",artist + i);
             
         });
@@ -163,18 +265,34 @@ $(artistas).each( function( i, artist ) {
 
             $(".rola").html("");
 
-            console.log(window[artistaGlobal + n].length);
+            console.log(artistaGlobal);
+
+            let discos = searchDiscos(artistaGlobal);
+
+            //console.log(discos);
+
+            let canciones = JSON.parse(discos[n][3]);
+
+            //console.log(canciones);
+
+            for(let j=0;j<canciones.length;j++){
+                document.getElementById("rola"+String(j)).innerHTML = canciones[j];
+            }
+
+            //console.log(window[artistaGlobal + n].length);
             
-            if(window[artistaGlobal + n].length >= 13){
+            if(canciones.length >= 13){
                 $("#pop").css("position","absolute");
             }else{
                 $("#pop").css("position","fixed");
             }
 
-            console.log(artistaGlobal + n);
-            $(window[artistaGlobal + n]).each(function(i,rola){
+            //console.log(artistaGlobal + n);
+
+            /*
+            $(discos).each(function(i,disco){
                 $("#rola" + i).html(rola);
-            });
+            });*/
         });
     }
     
