@@ -18,8 +18,10 @@ var artistas = ["Alberto",
                 "Ellie",
                 "Enrique",
                 "Fatoumata",
+                "Gabry",
                 "Genitallica",
                 "Geoffrey",
+                "Grupo",
                 "Handel",
                 "Hombres",
                 "Illapu",
@@ -42,6 +44,7 @@ var artistas = ["Alberto",
                 "Pink",
                 "Pxndx",
                 "Rosalia",
+                "Santa",
                 "Shakira",
                 "Sia",
                 "Sibelius",
@@ -70,8 +73,10 @@ var dDisclosure = ["Energy"];var fDisclosure = [0];
 var dEllie = ["Halcyon Days"];var fEllie = [0];
 var dEnrique = ["Sex and love"]; var fEnrique = [0];
 var dFatoumata = ["Nterini - A COLORS SHOW"];var fFatoumata = [1];
+var dGabry = ["Thunder"]; var fGabry = [1];
 var dGenitallica = ["Sean Todos Bien.Venidos"]; var fGenitallica = [0];
 var dGeoffrey = ["Exile"];var fGeoffrey =  [0];
+var dGrupo = ["Haciendo Historia"]; var fGrupo = [0];
 var dHandel = ["Oratorio del mesías"];var fHandel = [0];
 var dHombres = ["Desayuno continental"]; var fHombres = [0];
 var dIllapu = ["Música andina","Vuelvo amor, vuelvo vida"];var fIllapu = [0,0];
@@ -94,6 +99,7 @@ var dPantera = ["The great southern trendkill"]; var fPantera = [0];
 var dPink = ["The wall"]; var fPink = [0];
 var dPxndx = ["Para ti con desprecio","Amantes sunt amentes"]; var fPxndx = [0,0];
 var dRosalia = ["Motomami+"]; var fRosalia = [0];
+var dSanta = ["Necesidad"]; var fSanta = [0];
 var dShakira = ["Laundry service", "Grandes Exitos"]; var fShakira = [0,0];
 var dSia = ["This is acting", "1000 forms of fear"]; var fSia = [0,0];
 var dSibelius = ["Concierto para violín en re menor"]; var fSibelius = [0];

@@ -35,6 +35,8 @@ var Genitallica0 = ["Guardaespaldas"];
 
 var Geoffrey0 = ["Land of Anaka","Piri Wango Iya","Ye ye ye","Makambo","Solitude","Exile"];
 
+var Grupo0 = ["El final de nuestra historia"];
+
 var Handel0 = ["Part 1: Symphony","Part 1: Comfort ye, My people.. Ev'ry valley shall be exalted","HWV 56 / Pt. 1: And the glory of the lord","HWV 56 / Pt. 1: For unto us a child is born","HWV 56 / Pt. 1: Glory to god in the highest","HWV 56 / Pt. 2: Hallelujah"];
 
 var Hombres0 = ["El secreto de vivir"];
@@ -83,6 +85,8 @@ var Pxndx0 = ["Mi huracán llevaba tu nombre","Cita en el quirófano","...Y de l
 var Pxndx1 = ["Narcisista por excelencia","Procedimientos para llegar a un común acuerdo","Los malaventurados no lloran"];
 
 var Rosalia0 = ["Despechá","Motomami"];
+
+var Santa0 = ["Por mi México"];
 
 var Shakira0 = ["Suerte","Whenever, wherever","Te aviso, te anuncio","Objection"];
 var Shakira1 = ["Estoy aqui"];
